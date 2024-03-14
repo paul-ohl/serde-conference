@@ -10,8 +10,16 @@ name = "json_example"
 path = "src/json_example.rs"
 
 [[bin]]
+name = "ultra_basic"
+path = "src/ultra_basic.rs"
+
+[[bin]]
 name = "simple_serialization"
 path = "src/simple_serialization.rs"
+
+[[bin]]
+name = "simple_serializer"
+path = "src/simple_serializer.rs"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }

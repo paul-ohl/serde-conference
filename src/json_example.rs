@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 fn main() {
     let sim = Sim {
         name: "Sim".to_string(),
@@ -9,21 +11,17 @@ fn main() {
     // Serialize the data
     let sim_serialized = serde_json::to_string_pretty(&sim).unwrap();
     println!("Serialized data:\n{}", sim_serialized);
-
-    // Deserialize the data
-    let sim_deserialized: Sim = serde_json::from_str(&sim_serialized).unwrap();
-    println!("Serialized data:\n{:?}", sim_deserialized);
 }
 
-#[derive(serde::Deserialize, serde::Serialize, Debug)]
+#[derive(serde::Serialize)]
 struct Sim {
     name: String,
-    age: u8,
+    age: u8, // max age is 255
     is_alive: bool,
     gender: Gender,
 }
 
-#[derive(serde::Deserialize, serde::Serialize, Debug)]
+#[derive(serde::Serialize)]
 enum Gender {
     Male,
     Female,

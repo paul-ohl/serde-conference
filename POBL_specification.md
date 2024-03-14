@@ -18,12 +18,12 @@ example: 🫀 1 🤍 2 🤍 3 🍃
 
 ## Object
 
-🏗️ [name] 👩‍🔧 Starts the object
+🏗️ [name] 🔧 Starts the object
 \n is the separator
 🏢 Ends the object
 
 example:
-🏗️ Sim 👩‍🔧
+🏗️ Sim 🔧
 name ➡️  John
 age ➡️  30
 🏢
