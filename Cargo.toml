@@ -10,8 +10,8 @@ name = "json_example"
 path = "src/json_example.rs"
 
 [[bin]]
-name = "ultra_basic"
-path = "src/ultra_basic.rs"
+name = "expand_this"
+path = "src/expand_this.rs"
 
 [[bin]]
 name = "simple_serialization"

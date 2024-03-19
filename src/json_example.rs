@@ -1,30 +1,28 @@
 #![allow(unused)]
 
 fn main() {
-    let sim = Sim {
-        name: "Poupidou".to_string(),
-        age: 24,
-        is_alive: true,
-        gender: Gender::Other("Non-binary".to_string()),
-        stuff: vec![String::from("Baguette"), String::from("Croissant")],
-    };
+    // let sim = Sim {
+    //     name: "Poupidou".to_string(),
+    //     age: 24,
+    //     is_alive: true,
+    //     gender: Gender::Other("Non-binary".to_string()),
+    //     stuff: vec![String::from("Baguette"), String::from("Croissant")],
+    // };
+    //
+    // // Serialize the data
+    // let sim_serialized = serde_json::to_string_pretty(&sim).unwrap();
+    // println!("Serialized data:\n{}", sim_serialized);
 
     let json_sim = r#"
-{
-    "name": "Pipouda",
-    "age": 27,
-    "is_alive": true,
-    "gender": "Female",
-    "stuff": [],
-    "autre-info": "Autre info, mais on s'en fiche un peu"
-}
-    "#;
-
-    // Serialize the data
-    let sim_serialized = serde_json::to_string_pretty(&sim).unwrap();
-    println!("Serialized data:\n{}", sim_serialized);
-
-    println!("\n----------------------------\n");
+    {
+        "name": "Pipouda",
+        "age": 27,
+        "is_alive": true,
+        "gender": "Female",
+        "stuff": [],
+        "autre-info": "Autre info, mais on s'en fiche un peu"
+    }
+        "#;
 
     // Deserialize the data
     let sim_deserialized: Sim = serde_json::from_str(json_sim).unwrap();
